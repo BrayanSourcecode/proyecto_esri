@@ -1,0 +1,64 @@
+body{
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+
+/* Estilos bienbenidos*/
+.bienvenidos{
+    width: 100%;
+    height: 4rem;
+    background-color: aqua;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .bienvenidos_text{
+
+} */
+
+/* estilos content */
+.content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    
+}
+/* estilos content aside lateral */
+.lateral{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* background-image:linear-gradient(0deg,
+    rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../imagenes/fondo3.jpg); */
+    background-image:url("/utils/img/lateral1.jpg");
+    background-size: cover;
+
+}
+
+.filtros{
+    width: 90%;
+    height: 7rem;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(0,0,0,0.5);
+
+}
+.filtros_text{
+color: white;
+}
+/* estilos content  */
+#map{
+    padding: 0;
+    margin: 0;
+    width:70%;
+  }
