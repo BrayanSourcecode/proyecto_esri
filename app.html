@@ -11,37 +11,45 @@
 </head>
 
 <body>
-    <nav class="bienvenidos">
-        <span class="bienvenidos_text"> Bienvenidos ,Encuentra un lugar y a rodar moto moto moto</span>
+    <nav class="welcome">
+        <span class="welcome_text"> Bienvenidos ,Encuentra un lugar y a rodar moto moto moto</span>
     </nav>
     <container class="content">
-        <aside class="lateral">
-            <div class="filtros">
-                <h3 class="filtros_text">Lugarares Turisticos</h3>
-                <select name="" id="">
-                    <option value="">OPTION 1</option>
-                    <option value="">OPTION 1</option>
-                    <option value="">OPTION 1</option>
-                    <option value="">OPTION 1</option>
-                </select>
+        <aside class="aside">
+            <div class="filters">
+                <h2 class="filters_title">Filters</h2>
+                <fieldset class="filters_lugar">
+                    <legend class="filters_legend">Turing</legend>
+                    <label for="La Dorada" class="filters_label"><input type="radio" id="La Dorada" class="filtros_input" name="filter_input" >La Dorada</label>
+                    <label for="" class="filters_label"><input type="radio"id="" class="filtros_input" name="filter_input">Villeta</label>
+                    <label for="" class="filters_label"><input type="radio"id=""  class="filtros_input" name="filter_input">Kenedy</label>
+                    <label for="" class="filters_label"><input type="radio" id="" class="filtros_input" name="filter_input">Kenedy</label>
+                    <label for="" class="filters_label"><input type="radio" id="" class="filtros_input" name="filter_input">Kenedy</label>
+                    <label for="" class="filters_label"><input type="radio"id=""  class="filtros_input" name="filter_input">Kenedy</label>
+                </fieldset>
+
             </div>
-            <div class="filtros">
-                <h3 class="filtros_text">Gasolineras</h3>                                                                                                    
-                <select name="" id="">
-                    <option value="">False</option>
-                    <option value="">True</option>
-                </select>
+            <div class="filters">
+                <h3 class="filters_h3">Gas Stations</h3>
+                <div class="filters_select">
+                    <select class="options" name="" id="">
+                        <option class="option" value="">Yes</option>
+                        <option class="option" value="">No</option>
+                    </select>
+                </div>
             </div>
-            <div class="filtros">
-                <select name="" id="">
-                    <option value="">False</option>
-                    <option value="">True</option>
-                </select>
+            <div class="filters">
+                <h3 class="filters_h3">Restaurant</h3>
+                <div class="filters_select">
+                    <select class="options" name="" id="">
+                        <option class="option" value="">Yes</option>
+                        <option class="option"value="">No</option>
+                    </select>
+                </div>
             </div>
-            
         </aside>
         <div id="map">
-    
+
         </div>
     </container>
     <script src="/utils/Js/Mapa.js" type="module"> </script>
