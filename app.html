@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
-    <link rel="stylesheet" href="/utils/css/app.css">
+    <link rel="stylesheet" href="./utils/css/app.css">
 </head>
 
 <body>
@@ -16,6 +16,7 @@
     </nav>
     <container class="content">
         <aside class="aside">
+            <!-- <form id="formulario" action=""> -->
             <div class="filters">
                 <h2 class="filters_title">Filters</h2>
                 <fieldset class="filters_lugar">
@@ -26,7 +27,7 @@
                     <label for="Ibague" class="filters_label"><input type="radio" id="Ibague" class="filters_input" name="status" value="Ibague">Ibague</label>
                     <label for="Tunja" class="filters_label"><input type="radio" id="Tunja" class="filters_input" name="status" value="Tunja">Tunja</label>
                     <label for="Villavicencio" class="filters_label"><input type="radio"id="Villavicencio"  class="filters_input" name="status" value="Villavicencio">Villavicencio</label>
-                    <label for="Todos" class="filters_label"><input type="radio"id="Todos"  class="filters_input" name="status" value="Todos">Todos</label>
+                    <label for="Todos" class="filters_label"><input checked type="radio"id="Todos"  class="filters_input" name="status" value="Todos">Todos</label>
                 </fieldset>
 
             </div>
@@ -48,13 +49,15 @@
                     </select>
                 </div>
             </div>
+                <!-- <input id="enviar" type="submit"> -->
+            <!-- </form> -->
         </aside>
         <div id="map">
-
+            
         </div>
     </container>
-    <script src="/utils/Js/Mapa.js" type="module"> </script>
-    <script src="/utils/Js/tourism.js" type="module"> </script>
+    <script src="/utils/Js/index.js" type="module"> </script>
+   
 </body>
 
 </html>
