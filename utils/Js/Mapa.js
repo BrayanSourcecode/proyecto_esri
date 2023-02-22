@@ -3,32 +3,48 @@ export class Mapa {
     this.apiKey = "AAPK3a46155e72e141f7a1e526779e26ee9eAjXhDfndw1NljGMOgVuF26eFX3-eeUXZZOyG1ndpeWqpSuegyvOx67wvbav2qGrx";
   }
 
-  createMap(Map, MapView, esriConfig) {
+  createMap(Map, TypeView, esriConfig,BasemapGallery,Expand,Search) {
 
     esriConfig.apiKey = this.apiKey
     // base del mapa
     const map = new Map({
-      basemap: "arcgis-navigation"  // Basemap layer service // hay varias bases
+      basemap:"arcgis-streets-night"  // Basemap layer service // hay varias bases
     });
 
-    //visualizacion del mapa
-    const view = new MapView({
+    const view = new TypeView({
       map: map,
       center: [-74.663154, 5.454510],
-      zoom: 7,
+      zoom:3,
       container: "map"
     });
-    return map
 
-  } 23
+    // agregamos el widget de  galria para que el usuario escoja el tipo de mapa que quiera
+   const basemapgallery=new BasemapGallery({
+    view: view,
+   
+  });
+    const expand=new Expand({
+      expandIconClass:"esri-icon-layer-list",
+      view:view,
+      content:basemapgallery,
+    });
+
+    view.ui.add(expand,"bottom-right");
+//barra de buscar
+  const searchWidget = new Search({
+    view: view
+  });
+
+  view.ui.add(searchWidget,"top-right");
+
+    return view
+
+  } 
 
 
-  createLayersPlace(map, GraphicsLayer, Graphic, newData) {
-    //one capa
+  createLayersPlace(view,Graphic,newData) {
+    // one capa
     // agregamos las capas al mapa
-    const graphicsLayer = new GraphicsLayer();
-    map.add(graphicsLayer);
-
     let keysi = Object.keys(newData);
     // console.log(valu[0])
     // console.log(newData["Dorada"]["park_simon"]["ubication"])
@@ -39,30 +55,30 @@ export class Mapa {
         let keysy = Object.keys(newData[keysi[i]][keysj[j]])
         
 
-// creamos el la nueva capa o grafico
-        const graphicMap = new Graphic({
-          //le pasamos el tipo de geometria  y las ubicacionesd e los puntos
-          geometry: {
-            type: "point",
-            longitude: newData[keysi[i]][keysj[j]]["ubication"][0],
-            latitude: newData[keysi[i]][keysj[j]]["ubication"][1]
-          },
-
-          //le pasamos elsimbolo y el tama;o y el icono en cada punto
-          symbol: {
-            type: "picture-marker",
-            url: "/utils/img/simbol/3701861.png",
-            width: "70px",
-            height: "70px",
-            color: "red",
-            outline: {
-              color: [255, 255, 255], // White
-              width: 1
-            }
-          },
-
-          //pasamos la informacion de cada lugar para mostararla en una venta emergente
-          popupTemplate:{
+// creamos la nueva capa o grafico
+        const graphicMap =new Graphic({
+            //le pasamos el tipo de geometria  y las ubicacionesd e los puntos
+            geometry: {
+              type: "point",
+              longitude: newData[keysi[i]][keysj[j]]["ubication"][0],
+              latitude: newData[keysi[i]][keysj[j]]["ubication"][1]
+            },
+            
+            //le pasamos elsimbolo y el tama;o y el icono en cada punto
+            symbol: {
+              type: "picture-marker",
+              url: "/utils/img/simbol/3701861.png",
+              width: "50px",
+              height: "50px",
+              color: "red",
+              outline: {
+                color: [155, 155, 155],
+                width: 10
+              }
+            },
+            
+            //pasamos la informacion de cada lugar para mostararla en una venta emergente
+            popupTemplate:{
               title:newData[keysi[i]][keysj[j]]["title"],
               content:[
                 {
@@ -83,9 +99,9 @@ export class Mapa {
                 }
               ]
             }
-
-        });
-        graphicsLayer.add(graphicMap);
+          });
+        
+        view.graphics.add(graphicMap);
         
     }
   }
@@ -94,39 +110,12 @@ export class Mapa {
 
 
   }
-   
+  
+
 // parentesis de clase
 }
 
 
 
 
-
-
- 
-// const graphicsLayer = new GraphicsLayer();
-// map.add(graphicsLayer);
-
-//  for(let key in touristPlace){
-//   for(let keyj in touristPlace[key]){
-//     const graphicMap = new Graphic({
-//       geometry:{ type: "point",
-//         longitude:touristPlace[keyj][0],
-//         latitude:touristPlace[keyj][1]
-//       },
-//       symbol:{ type:"picture-marker",
-//       url:"/utils/img/simbol/tree-alt-solid-24.png",
-//       width:"50px",
-//       height:"50px",
-//       color:"red",
-//       outline: {
-//       color: [255, 255, 255], // White
-//       width: 1
-//       }
-//       }
-//     });
-
-//     graphicsLayer.add(graphicMap);
-//   }
-// };
 

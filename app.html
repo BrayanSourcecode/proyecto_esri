@@ -11,14 +11,16 @@
 </head>
 
 <body>
-    <nav class="welcome">
-        <span class="welcome_text"> Bienvenidos ,Encuentra un lugar y a rodar moto moto moto</span>
-    </nav>
     <container class="content">
         <aside class="aside">
             <!-- <form id="formulario" action=""> -->
             <div class="filters">
                 <h2 class="filters_title">Filters</h2>
+                <div class="Map_3D">
+                    <h4 class="Map_3D_text">Map 3D</h4>
+                    <input id="Map_3D_inp" type="checkbox" >
+                    <label for="Map_3D_inp" class="Map_3D_lbl"></label>
+                </div>
                 <fieldset class="filters_lugar">
                     <legend class="filters_legend">Touris</legend>
                     <label for="Dorada" class="filters_label"><input  type="radio" id="Dorada" class="filters_input" name="status" value="Dorada" >La Dorada</label>
@@ -53,9 +55,8 @@
                 <!-- <input id="enviar" type="submit"> -->
             <!-- </form> -->
         </aside>
-        <div id="map">
-            
-        </div>
+        <div id="map"></div>
+        <!-- <div id="moreMap" ></div> -->
     </container>
     <script src="/utils/Js/index.js" type="module"> </script>
    

@@ -8,21 +8,23 @@
     color: white;
 }
 
+
 /* Estilos bienbenidos*/
-.welcome{
+/* .welcome{
     width: 100%;
     height: 4rem;
-    background-color: aqua;
+    background-image:url(/utils/img/cielo.jpg);
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 
 /* estilos content */
 .content{
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex; 
 }
 
@@ -53,7 +55,59 @@
     
 }
 
-.filters_lugar{
+.Map_3D{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.Map_3D_text{
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    /* background-color: rgba(0,0,0,0.5) ;
+    border: 1px solid white; */
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 10px 10px;
+}
+.Map_3D_lbl{
+    background-color: #aaa;
+    display: inline-block;
+    width: 3rem;
+    height: 1.3rem;
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    
+}
+.Map_3D_lbl::after{
+    position: absolute;
+    content: "";
+    width: 17px;
+    height: 17px;
+    border-radius: 100px;
+    background-color: white;
+    left: 5px; ;
+    transition: 0.5s;
+}
+
+#Map_3D_inp{
+    display: none;
+}
+#Map_3D_inp:checked ~.Map_3D_lbl{
+    background-color: #61A0FF;
+}
+ #Map_3D_inp:checked ~.Map_3D_lbl:after{
+    left: 28px;
+
+
+ } 
+ 
+ 
+ 
+ .filters_lugar{
     /* background-color: aqua; */
     margin-top: 3rem;
     width: 80%;
