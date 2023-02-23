@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">Colombia
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
@@ -18,48 +18,70 @@
                 <h2 class="filters_title">Filters</h2>
                 <div class="Map_3D">
                     <h4 class="Map_3D_text">Map 3D</h4>
-                    <input id="Map_3D_inp" type="checkbox" >
+                    <input id="Map_3D_inp" type="checkbox">
                     <label for="Map_3D_inp" class="Map_3D_lbl"></label>
                 </div>
                 <fieldset class="filters_lugar">
                     <legend class="filters_legend">Touris</legend>
-                    <label for="Dorada" class="filters_label"><input  type="radio" id="Dorada" class="filters_input" name="status" value="Dorada" >La Dorada</label>
-                    <label for="Villeta" class="filters_label"><input type="radio"id="Villeta" class="filters_input" name="status" value="Villeta">Villeta</label>
-                    <label for="Honda" class="filters_label"><input type="radio"id="Honda"  class="filters_input" name="status" value="Honda">Honda</label>
-                    <label for="Ibague" class="filters_label"><input type="radio" id="Ibague" class="filters_input" name="status" value="Ibague">Ibague</label>
-                    <label for="Tunja" class="filters_label"><input type="radio" id="Tunja" class="filters_input" name="status" value="Tunja">Tunja</label>
-                    <label for="Villavicencio" class="filters_label"><input type="radio"id="Villavicencio"  class="filters_input" name="status" value="Villavicencio">Villavicencio</label>
-                    <label for="Todos" class="filters_label"><input checked type="radio"id="Todos"  class="filters_input" name="status" value="Todos">Todos</label>
+                    <label for="Colombia" class="filters_label"><input type="radio" id="Colombia" class="filters_input"
+                            name="status" value="Colombia">Colombia</label>
+                    <label for="Brazil" class="filters_label"><input type="radio" id="Brazil" class="filters_input"
+                            name="status" value="Brazil">Brazil</label>
+                    <label for="Bolivia" class="filters_label"><input type="radio" id="Bolivia" class="filters_input"
+                            name="status" value="Bolivia">Bolivia</label>
+                    <label for="Paraguay" class="filters_label"><input type="radio" id="Paraguay" class="filters_input"
+                            name="status" value="Paraguay">Paraguay</label>
+                    <label for="Argentina" class="filters_label"><input type="radio" id="Argentina"
+                            class="filters_input" name="status" value="Argentina">Argentina</label>
+                    <label for="Mexico" class="filters_label"><input type="radio" id="Mexico" class="filters_input"
+                            name="status" value="Mexico">Mexico</label>
+                    <label for="Todos" class="filters_label"><input checked type="radio" id="Todos"
+                            class="filters_input" name="status" value="Todos">Todos</label>
+                            <label for="Ninguno" class="filters_label"><input checked type="radio" id="Ninguno"
+                                class="filters_input" name="status" value="Ninguno">Ninguno</label>
                 </fieldset>
 
+            </div>
+
+            <div class="filters">
+                <h3 class="filters_h3">Hotels</h3>
+                <div class="filters_select">
+                    <select class="options" name="" id="">
+                        <option class="option" value="">Colombia</option>
+                        <option class="option" value="">Brazil</option>
+                        <option class="option" value="">Bolivia</option>
+                        <option class="option" value="">Paraguay</option>
+                        <option class="option" value="">Argentina</option>
+                        <option class="option" value="">Mexico</option>
+                        <option class="option" value="">Todos</option>   
+                        <option class="option" value="">Ninguno</option>   
+                    </select>
+                </div>
             </div>
             <div class="filters">
                 <h3 class="filters_h3">Gas Stations</h3>
                 <div class="filters_select">
                     <select class="options" name="" id="">
-                        <option class="option" value="">Yes</option>
-                        <option class="option" value="">No</option>
-                    </select>
-                </div>
-            </div>
-            <div class="filters">
-                <h3 class="filters_h3">Restaurant</h3>
-                <div class="filters_select">
-                    <select class="options" name="" id="">
-                        <option class="option" value="">Yes</option>
-                        <option class="option"value="">No</option>
+                        <option class="option" value="">Colombia</option>
+                        <option class="option" value="">Brazil</option>
+                        <option class="option" value="">Bolivia</option>
+                        <option class="option" value="">Paraguay</option>
+                        <option class="option" value="">Argentina</option>
+                        <option class="option" value="">Mexico</option>
+                        <option class="option" value="">Todos</option>
+                        <option class="option" value="">Ninguno</option>
                     </select>
                 </div>
             </div>
             <img src="" alt="">
-                <!-- <input id="enviar" type="submit"> -->
+            <!-- <input id="enviar" type="submit"> -->
             <!-- </form> -->
         </aside>
         <div id="map"></div>
         <!-- <div id="moreMap" ></div> -->
     </container>
     <script src="/utils/Js/index.js" type="module"> </script>
-   
+
 </body>
 
 </html>

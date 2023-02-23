@@ -14,7 +14,7 @@ export class Mapa {
     const view = new TypeView({
       map: map,
       center: [-74.663154, 5.454510],
-      zoom:3,
+      zoom:2,
       container: "map"
     });
 
@@ -53,6 +53,7 @@ export class Mapa {
       // console.log(keysj)
       for (let j = 0; j < keysj.length; j++) {
         let keysy = Object.keys(newData[keysi[i]][keysj[j]])
+        console.log(keysy)
         
 
 // creamos la nueva capa o grafico

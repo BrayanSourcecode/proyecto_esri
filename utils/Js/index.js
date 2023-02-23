@@ -11,6 +11,7 @@ import Expand from"https://js.arcgis.com/4.25/@arcgis/core/widgets/Expand.js"
 import Search from"https://js.arcgis.com/4.25/@arcgis/core/widgets/Search.js"
 //data
 import data from "../data/data.js";
+// import data from "../data/datapru.js"
 
 //clases
 import { Mapa } from "./Mapa.js";
