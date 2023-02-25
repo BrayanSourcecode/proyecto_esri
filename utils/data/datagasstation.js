@@ -1,4 +1,4 @@
-const dataGasStations = {
+const datagasStations = {
     Colombia: {
         tunja: {
             ubication: [-73.365690, 5.535312],
@@ -73,3 +73,5 @@ const dataGasStations = {
     }
 
 }
+
+export default datagasStations;

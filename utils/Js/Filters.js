@@ -18,10 +18,6 @@ export class Filters {
     }
 
 
-    searchGasStations(){
-
-    }
-
 
 
 }
