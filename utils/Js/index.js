@@ -41,6 +41,7 @@ let TypeView = MapPrincipal();
 const input_swicht=document.getElementById("Map_3D_inp");
 input_swicht.addEventListener("click",()=>{
     if(input_swicht.checked){
+        const form=document.getElementById("form").reset(); 
         let viewScena=mapa.createMap(Map,SceneView,esriConfig,BasemapGallery,Expand,Search);
         TypeView=viewScena;
         let placename="Todos";
@@ -49,7 +50,8 @@ input_swicht.addEventListener("click",()=>{
         let handle="touris"
         mapa.createLayersPlace(TypeView,Graphic,newData,icono,handle);
     }   else{
-      TypeView = MapPrincipal()
+        const form=document.getElementById("form").reset();
+        TypeView = MapPrincipal()
     }   
 })
 

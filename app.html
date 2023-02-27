@@ -13,7 +13,6 @@
 <body>
     <container class="content">
         <aside class="aside">
-            <!-- <form id="formulario" action=""> -->
             <div class="filters">
                 <h2 class="filters_title">Filters</h2>
                 <div class="Map_3D">
@@ -21,30 +20,34 @@
                     <input id="Map_3D_inp" type="checkbox">
                     <label for="Map_3D_inp" class="Map_3D_lbl"></label>
                 </div>
-                <fieldset class="filters_lugar">
-                    <legend class="filters_legend">Touris <img class="filters_img" src="/utils//img//simbol/3701861.png"> </legend>
-                    <label for="Colombia" class="filters_label"><input type="radio" id="Colombia" class="filters_input"
-                            name="status" value="Colombia">Colombia</label>
-                    <label for="Brazil" class="filters_label"><input type="radio" id="Brazil" class="filters_input"
-                            name="status" value="Brazil">Brazil</label>
-                    <label for="Bolivia" class="filters_label"><input type="radio" id="Bolivia" class="filters_input"
-                            name="status" value="Bolivia">Bolivia</label>
-                    <label for="Paraguay" class="filters_label"><input type="radio" id="Paraguay" class="filters_input"
-                            name="status" value="Paraguay">Paraguay</label>
-                    <label for="Argentina" class="filters_label"><input type="radio" id="Argentina"
-                            class="filters_input" name="status" value="Argentina">Argentina</label>
-                    <label for="Mexico" class="filters_label"><input type="radio" id="Mexico" class="filters_input"
-                            name="status" value="Mexico">Mexico</label>
-                    <label for="Todos" class="filters_label"><input checked type="radio" id="Todos"
-                            class="filters_input" name="status" value="Todos">Todos</label>
-                            <label for="Ninguno" class="filters_label"><input type="radio" id="Ninguno"
+                <!-- se agrega un form desde este lugar para formatear el formulario cada vez que cambia a 3D -->
+                <form id="form" action="">
+                    <fieldset class="filters_lugar">
+                        <legend class="filters_legend">Touris <img class="filters_img"
+                                src="/utils//img//simbol/3701861.png"> </legend>
+                        <label for="Colombia" class="filters_label"><input type="radio" id="Colombia"
+                                class="filters_input" name="status" value="Colombia">Colombia</label>
+                        <label for="Brazil" class="filters_label"><input type="radio" id="Brazil" class="filters_input"
+                                name="status" value="Brazil">Brazil</label>
+                        <label for="Bolivia" class="filters_label"><input type="radio" id="Bolivia"
+                                class="filters_input" name="status" value="Bolivia">Bolivia</label>
+                        <label for="Paraguay" class="filters_label"><input type="radio" id="Paraguay"
+                                class="filters_input" name="status" value="Paraguay">Paraguay</label>
+                        <label for="Argentina" class="filters_label"><input type="radio" id="Argentina"
+                                class="filters_input" name="status" value="Argentina">Argentina</label>
+                        <label for="Mexico" class="filters_label"><input type="radio" id="Mexico" class="filters_input"
+                                name="status" value="Mexico">Mexico</label>
+                        <label for="Todos" class="filters_label"><input checked type="radio" id="Todos"
+                                class="filters_input" name="status" value="Todos">Todos</label>
+                        <label for="Ninguno" class="filters_label"><input type="radio" id="Ninguno"
                                 class="filters_input" name="status" value="Ninguno">Ninguno</label>
-                </fieldset>
+                    </fieldset>
 
             </div>
 
             <div class="filters">
-                <h3 class="filters_h3">Hotels <img class="filters_img" src="/utils//img/simbol//h2-removebg-preview.png"></h3>
+                <h3 class="filters_h3">Hotels <img class="filters_img"
+                        src="/utils//img/simbol//h2-removebg-preview.png"></h3>
                 <div class="filters_select">
                     <select class="filters_options " name="" id="filters_option--hotels">
                         <option class="filters_option filters_option--hotels" value="Colombia">Colombia</option>
@@ -53,15 +56,18 @@
                         <option class="filters_option filters_option--hotels" value="Paraguay">Paraguay</option>
                         <option class="filters_option filters_option--hotels" value="Argentina">Argentina</option>
                         <option class="filters_option filters_option--hotels" value="Mexico">Mexico</option>
-                        <option class="filters_option filters_option--hotels" value="Todos">Todos</option>   
-                        <option class="filters_option filters_option--hotels" value="Ninguno" selected="true" >Ninguno</option>   
+                        <option class="filters_option filters_option--hotels" value="Todos">Todos</option>
+                        <option class="filters_option filters_option--hotels" value="Ninguno" selected="true">Ninguno
+                        </option>
                     </select>
                 </div>
             </div>
             <div class="filters">
-                <h3 class="filters_h3">Gas Stations<img class="filters_img" src="/utils//img//simbol/gasolineria-removebg-preview.png"></h3>
+                <h3 class="filters_h3">Gas Stations<img class="filters_img"
+                        src="/utils//img//simbol/gasolineria-removebg-preview.png"></h3>
                 <div class="filters_select">
-                    <select class="filters_options filters_options--gasStations" name="" id="filters_options--gasStations">
+                    <select class="filters_options filters_options--gasStations" name=""
+                        id="filters_options--gasStations">
                         <option class="filters_option filters_option--gasStations" value="Colombia">Colombia</option>
                         <option class="filters_option filters_option--gasStations" value="Brazil">Brazil</option>
                         <option class="filters_option filters_option--gasStations" value="Bolivia">Bolivia</option>
@@ -69,13 +75,13 @@
                         <option class="filters_option filters_option--gasStations" value="Argentina">Argentina</option>
                         <option class="filters_option filters_option--gasStations" value="Mexico">Mexico</option>
                         <option class="filters_option filters_option--gasStations" value="Todos">Todos</option>
-                        <option class="filters_option filters_option--gasStations" value="Ninguno" selected="true" >Ninguno</option>
+                        <option class="filters_option filters_option--gasStations" value="Ninguno" selected="true">
+                            Ninguno</option>
                     </select>
                 </div>
             </div>
-            <img src="" alt="">
-            <!-- <input id="enviar" type="submit"> -->
-            <!-- </form> -->
+
+            </form>
         </aside>
         <div id="map"></div>
         <!-- <div id="moreMap" ></div> -->
