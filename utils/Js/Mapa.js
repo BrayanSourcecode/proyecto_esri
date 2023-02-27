@@ -70,11 +70,6 @@ export class Mapa {
             url: icono,
             width: "50px",
             height: "50px",
-            color: "red",
-            outline: {
-              color: [155, 155, 155],
-              width: 10
-            }
           },
 
           //pasamos la informacion de cada lugar para mostararla en una venta emergente
