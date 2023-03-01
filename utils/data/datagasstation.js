@@ -21,6 +21,11 @@ const datagasStations = {
             ubication: [-43.217303, -22.911016],
             title: "Estación Posto BR (GNV) (Brazil)",
             img: "/utils/img/fotos_gasstations/cristo.jpg"
+        },
+        cesamar:{
+            ubication:[-48.311889,-10.225925],
+            title:"Posto Petrolíder (Brazil)",
+            img:"/utils/img/fotos_gasstations/cesamar.jpg"
         }
     },
     Bolivia: {
@@ -57,6 +62,11 @@ const datagasStations = {
             ubication:[-71.6274103846984,-46.54801711903976],
             title:"Lavadero Fabys  Gomeria (Argentina)",
             img:"/utils/img/fotos_gasstations/SANTACRUZ.jpg"
+        },
+         medasur:{
+            ubication:[-64.28087206110033,-36.61252256973362],
+            title:"Shell (Argentina)",
+            img:"/utils/img/fotos_gasstations/medasur.jpg"
         }
     },
     Mexico:{
@@ -69,6 +79,11 @@ const datagasStations = {
             ubication:[-109.87713566805795,22.903857043636773],
             title:"Repsol (Mexico)",
             img:"/utils/img/fotos_gasstations/LUCAS.jpg"
+        },
+        puente:{
+            ubication:[-99.9740060852491,20.37511450575005],
+            title:"Gasolinera REPSOL (Mexico)",
+            img:"/utils/img/fotos_gasstations/puente.jpg"
         }
     }
 

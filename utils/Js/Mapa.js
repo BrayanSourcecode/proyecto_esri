@@ -14,7 +14,7 @@ export class Mapa {
     const view = new TypeView({
       map: map,
       center: [-74.663154, 5.454510],
-      zoom: 2,
+      zoom: 1,
       container: "map"
     });
 
@@ -36,40 +36,40 @@ export class Mapa {
     });
 
     view.ui.add(searchWidget, "top-right");
-
-    return view
+    
+// retonamos la vista y el mapa para poder utilizarlos
+    return { map: map, view: view }
 
   }
 
 
-  createLayersPlace(view, Graphic, newData, icono,handle) {
-    // one capa
-    // agregamos las capas al mapa
+  createLayersPlace(map, Graphic, newData, icono, handle, GraphicsLayer) {
+    // sacamos las claves principales del objecto
     let keysi = Object.keys(newData);
-    // console.log(valu[0])
-    // console.log(newData["Dorada"]["park_simon"]["ubication"])
+    // creamos un array para guardar todos los graficos 
+    let newGraphics = []
+    // comensamos el recoorido
     for (let i = 0; i < keysi.length; i++) {
+      // haora sacamos las clasmes de cada uno de los paises
       let keysj = Object.keys(newData[keysi[i]])
-      // console.log(keysj)
+      // entramos en otro bucle a recorer las otras claves
       for (let j = 0; j < keysj.length; j++) {
-        let keysy = Object.keys(newData[keysi[i]][keysj[j]])
-
-        // creamos la nueva capa o grafico
-        var graphicMap = new Graphic({
-          //le pasamos el tipo de geometria  y las ubicacionesd e los puntos
+        // haora por cada ubicacion creamos un graphico
+        var graphics = new Graphic({
+          // attributes: {
+          //   title:newData[keysi[i]][keysj[j]]["title"],
+          //   description: newData[keysi[i]][keysj[j]]["description"]
+          // },
           geometry: {
-            Handles: "tr",
             type: "point",
             longitude: newData[keysi[i]][keysj[j]]["ubication"][0],
             latitude: newData[keysi[i]][keysj[j]]["ubication"][1]
           },
-
-          //le pasamos elsimbolo y el tama;o y el icono en cada punto
           symbol: {
             type: "picture-marker",
             url: icono,
-            width: "50px",
-            height: "50px",
+            width: "40px",
+            height: "40px",
           },
 
           //pasamos la informacion de cada lugar para mostararla en una venta emergente
@@ -95,25 +95,20 @@ export class Mapa {
             ]
           }
         });
-        graphicMap.addHandles("touris",handle)
-        view.graphics.add(graphicMap);
+        // agremaos el graphico que se creo ala matriz que se habia creado
+        newGraphics.push(graphics)
       }
     }
 
-  }
 
-  removePlaceMap(view,handle) {
-    let items=view.graphics.items
-    for (let i = items.length - 1; i >= 0; i--) {
-      // console.log(i)
-      if (items[i].hasHandles(handle)) {
-        // console.log(items.length)
-        // console.log("se borro algo")
-        view.graphics.remove(items[i])
-      }
-    }
+    // agregamos los graficos ala capa
+    const graphicsLayer = new GraphicsLayer({ graphics: newGraphics })
+    // agregamos un identificador ala capa
+    graphicsLayer.addHandles("touris", handle)
+    // agregamos al capa al mapa
+    map.add(graphicsLayer);
+
   }
-  // parentesis de clase
 }
 
 

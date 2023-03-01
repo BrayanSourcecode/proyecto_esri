@@ -21,7 +21,12 @@ const datahotels={
          ubication:[-43.213469,-22.911480],
          title:"Saionara Hotel  (Brazil)",
          img:"/utils/img/fotos_hotels/saionaria.png"
-     }
+     },
+     cesamar:{
+        ubication:[-48.329665187082895,-10.20860847745205],
+        title:"Casa Capim Dourado  (Brazil)",
+        img:"/utils/img/fotos_hotels/cesamar.jpg"
+    }
     },
     Bolivia:{
         parque_integra:{
@@ -57,6 +62,11 @@ const datahotels={
             ubication:[-71.63633158593201,-46.55263155232169],
             title:"Hotel Los Antiguos (Argentina)",
             img:"/utils/img/fotos_hotels/SANTACRUZ.jpg"
+        },
+        medasur:{
+            ubication:[-64.28048669435013,-36.618592911181445],
+            title:"Hotel La Estancia (Argentina)",
+            img:"/utils/img/fotos_hotels/medasur.jpeg"
         }
     },
     Mexico:{
@@ -69,6 +79,11 @@ const datahotels={
             ubication:[-109.9058018063312,22.888403921932255],
             title:"Bahia Hotel & Beach House (Mexico)",
             img:"/utils/img/fotos_hotels/LUCAS.jpg"
+        }, 
+        puente:{
+            ubication:[-100.01251973181711,20.38449112948748],
+            title:"Hotel Hacienda la Venta (Mexico)",
+            img:"/utils/img/fotos_hotels/puente.jpg"
         }
     }
 

@@ -108,7 +108,12 @@ const data= {
           title:"Cristo Redentor (Brazil)",
           description:"El Cristo Redentor o Cristo del Corcovado es una estatua art déco que representa a Jesús de Nazaret, con los brazos abiertos, mostrando a la ciudad de Río de Janeiro, Brasil. La estatua tiene una altura de treinta metros sobre un pedestal de ocho metros",
           img:"/utils/img/fotos/cristo(barazil).jpg"
-      }
+      },
+      cesamar:{
+        ubication:[-48.323225,-10.209636],
+        title:"Cesamar Park  (Brazil)",
+        img:"/utils/img/fotos/cesamar.jpg"
+    }
   },
   Bolivia:{
       parque_integra:{
@@ -150,7 +155,12 @@ const data= {
           title:"Los Antiguos, Santa Cruz (Argentina)",
           description:"os Antiguos es una localidad del Departamento Lago Buenos Aires de la provincia de Santa Cruz, en la región Patagónica de la República Argentina. Se encuentra a 1056 km de Río Gallegos, en el Noroeste de la provincia de Santa Cruz, en la costa sur del Lago Buenos Aires, y a orillas del río Los Antiguos",
           img:"/utils/img/fotos/santa cruz.jpg"
-      }
+      },
+      medasur:{
+        ubication:[-64.2815521776052 , -36.60193286317243],
+        title:"Centro Provincial de Cultura MEDASUR (Argentina)",
+        img:"/utils/img/fotos/medasur.jpg"
+    }
   },
   Mexico:{
       cancun:{
@@ -164,7 +174,13 @@ const data= {
           title:"Cabo San Lucas (Mexico)",
           description:"Cabo San Lucas es un balneario en el extremo sur de la península de Baja California en México, conocido por sus playas, actividades acuáticas y vida nocturna. La Playa El Médano es la principal del Cabo, con restaurantes al aire libre y numerosos bares. Después de la marina, se encuentra el promontorio del Fin de la Tierra, donde está la Playa del Amor y El Arco, una arcada natural en los riscos marinos",
           img:"/utils/img/fotos/san lucas.jpg"
-      }
+      },
+      puente:{
+        ubication:[-100.0100335167139,20.384754383573508],
+        title:"Puente de La Historia (Mexico)",
+        description:"Este material cuenta con derechos de propiedad intelectual. De no existir previa autorización por escrito de MEXICO TRAVEL CLUB, representada por Diseño, Tecnología y Creatividad S.A. de C.V., queda expresamente prohibida la publicación, retransmisión, distribución, venta, edición y cualquier otro uso de los contenidos (Incluyendo, pero no limitado a, contenido, texto, fotografías, audios, videos, recorridos virtuales y logotipos). Si desea hacer uso de este contenido por favor comuníquese a México Travel Club, al 01 800 890 8687 extensión 602. Y así conocerá nuestras tarifas de licencia de contenido, Muchas gracias.",
+        img:"/utils/img/fotos/puente.jpg"
+    }
   }
 
 
